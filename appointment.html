@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Appointment - Khatib Family Practice</title>
+    <meta name="description" content="Request an appointment with Khatib Family Practice. Our online form makes it easy to schedule visits for check-ups, consultations, or follow-up care.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <h1>Khatib Family Practice</h1>
+                <p class="tagline">Compassionate Care for All Ages</p>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="patient-resources.html">Patient Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="appointment-btn"><a href="appointment.html" class="active">Request Appointment</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Request an Appointment</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / <span>Request Appointment</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="appointment-section">
+        <div class="container">
+            <div class="appointment-intro">
+                <h2>Schedule Your Visit</h2>
+                <p>Thank you for choosing Khatib Family Practice for your healthcare needs. To request an appointment, please complete the form below. Our staff will contact you within 1-2 business days to confirm your appointment.</p>
+                <p>For urgent matters, please call our office directly at <strong>(555) 123-4567</strong>.</p>
+            </div>
+            
+            <div class="appointment-content">
+                <div class="appointment-form-container">
+                    <!-- This form will be set up to use a free form service like Formspree -->
+                    <form id="appointment-form" action="https://formspree.io/f/your-formspree-endpoint" method="POST" class="appointment-form">
+                        <h3>Patient Information</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name*</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name*</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dateOfBirth">Date of Birth*</label>
+                                <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select id="gender" name="gender">
+                                    <option value="">Select</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Non-Binary">Non-Binary</option>
+                                    <option value="Prefer not to say">Prefer not to say</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address*</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number*</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="patientStatus">Are you a new or existing patient?*</label>
+                            <select id="patientStatus" name="patientStatus" required>
+                                <option value="">Select</option>
+                                <option value="New Patient">New Patient</option>
+                                <option value="Existing Patient">Existing Patient</option>
+                            </select>
+                        </div>
+                        
+                        <h3>Appointment Request</h3>
+                        
+                        <div class="form-group">
+                            <label for="appointmentType">Type of Appointment*</label>
+                            <select id="appointmentType" name="appointmentType" required>
+                                <option value="">Select</option>
+                                <option value="Annual Physical">Annual Physical</option>
+                                <option value="Follow-up Visit">Follow-up Visit</option>
+                                <option value="New Patient Visit">New Patient Visit</option>
+                                <option value="Sick Visit">Sick Visit</option>
+                                <option value="Vaccination">Vaccination</option>
+                                <option value="Other">Other (please specify)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="appointmentReason">Reason for Visit*</label>
+                            <textarea id="appointmentReason" name="appointmentReason" rows="3" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="preferredProvider">Preferred Provider (if any)</label>
+                            <select id="preferredProvider" name="preferredProvider">
+                                <option value="">No Preference</option>
+                                <option value="Dr. Amir Khatib">Dr. Amir Khatib</option>
+                                <option value="Dr. Sarah Chen">Dr. Sarah Chen</option>
+                                <option value="First Available">First Available</option>
+                            </select>
+                        </div>
+                        
+                        <h3>Preferred Dates and Times</h3>
+                        <p class="form-info">Please select up to three preferred dates and times. We will try to accommodate your preferences.</p>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="preferredDate1">First Choice Date*</label>
+                                <input type="date" id="preferredDate1" name="preferredDate1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="preferredTime1">First Choice Time*</label>
+                                <select id="preferredTime1" name="preferredTime1" required>
+                                    <option value="">Select</option>
+                                    <option value="Morning">Morning (8:00 AM - 12:00 PM)</option>
+                                    <option value="Afternoon">Afternoon (12:00 PM - 5:00 PM)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="preferredDate2">Second Choice Date</label>
+                                <input type="date" id="preferredDate2" name="preferredDate2">
+                            </div>
+                            <div class="form-group">
+                                <label for="preferredTime2">Second Choice Time</label>
+                                <select id="preferredTime2" name="preferredTime2">
+                                    <option value="">Select</option>
+                                    <option value="Morning">Morning (8:00 AM - 12:00 PM)</option>
+                                    <option value="Afternoon">Afternoon (12:00 PM - 5:00 PM)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="preferredDate3">Third Choice Date</label>
+                                <input type="date" id="preferredDate3" name="preferredDate3">
+                            </div>
+                            <div class="form-group">
+                                <label for="preferredTime3">Third Choice Time</label>
+                                <select id="preferredTime3" name="preferredTime3">
+                                    <option value="">Select</option>
+                                    <option value="Morning">Morning (8:00 AM - 12:00 PM)</option>
+                                    <option value="Afternoon">Afternoon (12:00 PM - 5:00 PM)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="additionalInformation">Additional Information or Special Requests</label>
+                            <textarea id="additionalInformation" name="additionalInformation" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="insuranceVerification" name="insuranceVerification" value="yes">
+                            <label for="insuranceVerification">I would like the office to verify my insurance coverage before my appointment.</label>
+                        </div>
+                        
+                        <div class="form-group checkbox-group required">
+                            <input type="checkbox" id="consentContact" name="consentContact" value="yes" required>
+                            <label for="consentContact">I consent to be contacted by phone, email, or text regarding my appointment request.*</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <p class="form-note">* Indicates required field</p>
+                            <p class="form-error-message" style="display: none;">Please fill in all required fields.</p>
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary">Submit Appointment Request</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="appointment-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Appointment Guidelines</h3>
+                        <ul class="appointment-guidelines">
+                            <li>Please arrive 15 minutes early for your first visit to complete any necessary paperwork.</li>
+                            <li>Bring your insurance card and a valid photo ID to each appointment.</li>
+                            <li>If you need to cancel or reschedule, please call at least 24 hours in advance.</li>
+                            <li>For annual physicals, please fast for 8-12 hours prior to your appointment for accurate lab results.</li>
+                            <li>Bring a list of all current medications, including over-the-counter drugs and supplements.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3>Insurance Information</h3>
+                        <p>We accept most major insurance plans. Please contact our office for specific information about your coverage.</p>
+                        <div class="insurance-list">
+                            <span>Blue Cross Blue Shield</span>
+                            <span>Aetna</span>
+                            <span>Cigna</span>
+                            <span>UnitedHealthcare</span>
+                            <span>Medicare</span>
+                            <span>Medicaid</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3>Need Immediate Assistance?</h3>
+                        <p>For immediate appointment scheduling or questions, please call us directly:</p>
+                        <div class="sidebar-contact">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>(555) 123-4567</span>
+                        </div>
+                        <p>Our office hours:</p>
+                        <ul class="sidebar-hours">
+                            <li>Monday - Friday: 8:00 AM - 5:00 PM</li>
+                            <li>Saturday: 9:00 AM - 1:00 PM</li>
+                            <li>Sunday: Closed</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="emergency-contact">
+        <div class="container">
+            <div class="emergency-box">
+                <div class="emergency-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div class="emergency-content">
+                    <h2>For Medical Emergencies</h2>
+                    <p>If you are experiencing a medical emergency, please call 911 or go to the nearest emergency room.</p>
+                    <p>For after-hours urgent care needs, please call our main number and follow the prompts to reach the on-call provider.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Khatib Family Practice</h3>
+                    <p>123 Health Avenue<br>Cityville, ST 12345</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Email: info@khatibfamilypractice.com</p>
+                </div>
+                <div class="footer-hours">
+                    <h3>Office Hours</h3>
+                    <ul>
+                        <li><span>Monday - Friday:</span> 8:00 AM - 5:00 PM</li>
+                        <li><span>Saturday:</span> 9:00 AM - 1:00 PM</li>
+                        <li><span>Sunday:</span> Closed</li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="patient-resources.html">Patient Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="appointment.html">Request Appointment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Khatib Family Practice. All Rights Reserved.</p>
+                <ul class="footer-bottom-links">
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

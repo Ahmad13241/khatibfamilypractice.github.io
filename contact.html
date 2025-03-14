@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Khatib Family Practice</title>
+    <meta name="description" content="Contact Khatib Family Practice for appointments, questions, or assistance. Our dedicated team is here to help with all your healthcare needs.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <h1>Khatib Family Practice</h1>
+                <p class="tagline">Compassionate Care for All Ages</p>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="patient-resources.html">Patient Resources</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li class="appointment-btn"><a href="appointment.html">Request Appointment</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / <span>Contact</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-intro">
+                <h2>We're Here to Help</h2>
+                <p>We welcome your questions, feedback, and appointment requests. Our team is dedicated to providing you with the information and support you need. Please use the form below to get in touch, or contact us directly using the information provided.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <h3>Send Us a Message</h3>
+                    <!-- This form will be set up to use a free form service like Formspree -->
+                    <form id="contact-form" action="https://formspree.io/f/your-formspree-endpoint" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name*</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject*</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message*</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <p class="form-note">* Indicates required field</p>
+                            <p class="form-error-message" style="display: none;">Please fill in all required fields.</p>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="contact-info-container">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Address</h4>
+                                <p>123 Health Avenue<br>Cityville, ST 12345</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Phone</h4>
+                                <p>Main: (555) 123-4567</p>
+                                <p>Fax: (555) 123-4568</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Email</h4>
+                                <p>info@khatibfamilypractice.com</p>
+                                <p>appointments@khatibfamilypractice.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Office Hours</h4>
+                                <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                                <p>Saturday: 9:00 AM - 1:00 PM</p>
+                                <p>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-connect">
+                        <h3>Connect With Us</h3>
+                        <p>Follow us on social media for health tips, office updates, and more.</p>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <h2>Find Us</h2>
+            <p>We are conveniently located in the heart of Cityville, with ample parking available.</p>
+            
+            <div class="map-container">
+                <!-- 
+                In a real implementation, this would include an embedded Google Map 
+                For this demo, we'll use a placeholder
+                -->
+                <div class="map-placeholder">
+                    <p>Map Loading... In a live site, an interactive Google Map would be displayed here.</p>
+                </div>
+            </div>
+            
+            <div class="directions">
+                <h3>Directions</h3>
+                <div class="directions-grid">
+                    <div class="direction-item">
+                        <h4>From Downtown</h4>
+                        <ol>
+                            <li>Head north on Main Street</li>
+                            <li>Turn right onto Health Avenue</li>
+                            <li>Our office will be on the right side, across from Central Park</li>
+                        </ol>
+                    </div>
+                    <div class="direction-item">
+                        <h4>Public Transportation</h4>
+                        <ul>
+                            <li>Bus Routes: 15, 22, and 34 stop directly in front of our building</li>
+                            <li>Nearest Subway Station: Central Station (0.5 miles)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="emergency-contact">
+        <div class="container">
+            <div class="emergency-box">
+                <div class="emergency-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div class="emergency-content">
+                    <h2>For Medical Emergencies</h2>
+                    <p>If you are experiencing a medical emergency, please call 911 or go to the nearest emergency room.</p>
+                    <p>For after-hours urgent care needs, please call our main number and follow the prompts to reach the on-call provider.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Khatib Family Practice</h3>
+                    <p>123 Health Avenue<br>Cityville, ST 12345</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Email: info@khatibfamilypractice.com</p>
+                </div>
+                <div class="footer-hours">
+                    <h3>Office Hours</h3>
+                    <ul>
+                        <li><span>Monday - Friday:</span> 8:00 AM - 5:00 PM</li>
+                        <li><span>Saturday:</span> 9:00 AM - 1:00 PM</li>
+                        <li><span>Sunday:</span> Closed</li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="patient-resources.html">Patient Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="appointment.html">Request Appointment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Khatib Family Practice. All Rights Reserved.</p>
+                <ul class="footer-bottom-links">
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
